@@ -4,6 +4,7 @@ import Student from "../../assets/logo/student.svg";
 import EffectualLogo from "../../assets/img/effectual-logo.png";
 import { registerStudent } from "../../services/user";
 import { toast } from "react-toastify";
+import { FaAnglesRight } from "react-icons/fa6";
 
 const UserDetail = ({ setStep }: any) => {
   const [userDetail, setUserDetail] = useState({
@@ -142,9 +143,9 @@ const UserDetail = ({ setStep }: any) => {
             <div className="px-10 ">
               <button
                 type="submit"
-                className="  bg-[#CF9E1E] text-white rounded-2xl py-[8px] w-full px-10"
+                className="  bg-[#CF9E1E] text-white rounded-2xl py-[8px] w-full px-10 flex items-center justify-center gap-6"
               >
-                Go to Test
+                Go to Test <FaAnglesRight/>
               </button>
             </div>
           </form>

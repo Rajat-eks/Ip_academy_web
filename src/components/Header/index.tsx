@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 import { submitTest } from "../../services/exam";
 
 const Header = ({ setStep, result, setResult }: any) => {
-  const [seconds, setSeconds] = useState(1 * 5);
+  const [seconds, setSeconds] = useState(20 * 60);
   const [apiCalled, setApiCalled] = useState(false);
 
   useEffect(() => {
