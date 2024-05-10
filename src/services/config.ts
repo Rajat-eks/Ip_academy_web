@@ -6,7 +6,7 @@ const ACCESS_TOKEN = localStorage.getItem("access_token")
 
 let axiosObject = axios.default.create();
 axiosObject.defaults.baseURL = "https://ip-academy-apis.onrender.com/api/v1/";
-axiosObject.defaults.timeout = 2000;
+axiosObject.defaults.timeout = 8000;
 axiosObject.defaults.headers.common = {
   "Content-Type": "application/json",
   Accept: "application/json",
