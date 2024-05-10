@@ -5,6 +5,7 @@ import EffectualLogo from "../../assets/img/effectual-logo.png";
 import { registerStudent } from "../../services/user";
 import { toast } from "react-toastify";
 import { FaAnglesRight } from "react-icons/fa6";
+import Terms from "../Terms";
 
 const UserDetail = ({ setStep }: any) => {
   const [userDetail, setUserDetail] = useState({
@@ -13,6 +14,7 @@ const UserDetail = ({ setStep }: any) => {
     phone: "+91",
     college: "",
   });
+  const [term, setTerm] = useState(false);
 
   const submitHandler = async (e: any) => {
     e.preventDefault();
@@ -139,18 +141,31 @@ const UserDetail = ({ setStep }: any) => {
                   className="border-[1px] rounded-md bg-transparent p-2 w-full"
                 />
               </div>
+              <div className="flex items-center gap-2">
+                <input type="checkbox" name="" required id="" className="" />
+                <label htmlFor="" className="pb-1 text-sm">
+                  I accept{" "}
+                  <span
+                    onClick={() => setTerm(true)}
+                    className="text-red-600 cursor-pointer"
+                  >
+                    terms & condition.
+                  </span>
+                </label>
+              </div>
             </div>
             <div className="px-10 ">
               <button
                 type="submit"
                 className="  bg-[#CF9E1E] text-white rounded-2xl py-[8px] w-full px-10 flex items-center justify-center gap-6"
               >
-                Go to Test <FaAnglesRight/>
+                Go to Test <FaAnglesRight />
               </button>
             </div>
           </form>
         </div>
       </section>
+      {term && <Terms isOpen={setTerm} />}
     </main>
   );
 };
