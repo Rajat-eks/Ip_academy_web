@@ -4,6 +4,7 @@ import QuestionGraph from "../QuestionGraph";
 import BgImage from "../../assets/logo/bg-image.jpg";
 import { submitTest } from "../../services/exam/submitExam";
 import { toast } from "react-toastify";
+import SubmitForm from "../SubmitForm";
 
 const question: any = [
   {
@@ -229,7 +230,6 @@ const Exam = ({ setStep, result, setResult }: any) => {
       setResult([...result, obj]);
     }
   };
-  console.log(result);
 
   return (
     <main

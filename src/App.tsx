@@ -6,10 +6,12 @@ import Header from "./components/Header";
 import UserDetail from "./components/UserDetail";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import SubmitForm from "./components/SubmitForm";
 
 function App() {
   const [step, setStep] = useState(1);
   const [result, setResult] = useState<any>([]);
+
   useEffect(() => {
     if (localStorage.getItem("access_token")) {
       setStep(2);
@@ -23,7 +25,7 @@ function App() {
       ) : (
         <>
           <Header setStep={setStep} result={result} setResult={setResult} />
-          <Exam setStep={setStep} result={result} setResult={setResult}/>
+          <Exam setStep={setStep} result={result} setResult={setResult} />
         </>
       )}
     </div>
