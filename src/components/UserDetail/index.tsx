@@ -66,9 +66,9 @@ const UserDetail = ({ setStep }: any) => {
       </section>
       <section className=" flex items-center justify-center text-white  ">
         <div className="  rounded-2xl py-3 shadow-lg bg-[#146FCA]">
-          <h1 className="text-center font-semibold text-2xl ">IP Academy</h1>
+          <h1 className="text-center font-semibold text-2xl ">IP Academy </h1>
           <h2 className="text-center font-semibold text-2xl  pt-2">
-            Student Registeration Form
+            Test Registration Form
           </h2>
           <p className="text-center font-light text-sm text-gray-200  pt-3">
             Fill your Details!

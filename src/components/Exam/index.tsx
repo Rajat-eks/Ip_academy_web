@@ -153,7 +153,7 @@ const question: any = [
     correct: "1",
   },
 ];
-const Exam = ({ setStep, result, setResult }: any) => {
+const Exam = ({ setStep, result, setResult, setIsSubmit }: any) => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
 
   const [skip, setSkip] = useState<any>(0);
@@ -178,6 +178,10 @@ const Exam = ({ setStep, result, setResult }: any) => {
         toast.success(response?.message);
         localStorage.clear();
         setStep(1);
+        setIsSubmit(true);
+        setTimeout(() => {
+          setIsSubmit(false);
+        }, 3000);
       } else {
         toast.error("Submit Again!");
       }
@@ -192,6 +196,7 @@ const Exam = ({ setStep, result, setResult }: any) => {
       setCurrentQuestion((prev: any) => prev - 1);
     }
   };
+  console.log(result);
 
   const questionHandler = (
     question: any,
@@ -217,7 +222,6 @@ const Exam = ({ setStep, result, setResult }: any) => {
         selectedAnswer: content,
         isCorrect: correct == answerNo,
       };
-      console.log("obj", obj);
       setResult([...updatedResult, obj]);
     } else {
       const obj = {
