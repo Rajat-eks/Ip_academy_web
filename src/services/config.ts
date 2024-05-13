@@ -7,8 +7,8 @@ const ACCESS_TOKEN = () => {
 };
 
 let axiosObject = axios.default.create();
-// axiosObject.defaults.baseURL = "https://ip-academy-apis.onrender.com/api/v1/";
-axiosObject.defaults.baseURL = "http://localhost:8080/api/v1/";
+axiosObject.defaults.baseURL = "https://ip-academy-apis.onrender.com/api/v1/";
+// axiosObject.defaults.baseURL = "http://localhost:8080/api/v1/";
 axiosObject.defaults.timeout = 8000;
 axiosObject.defaults.headers.common = {
   "Content-Type": "application/json",
