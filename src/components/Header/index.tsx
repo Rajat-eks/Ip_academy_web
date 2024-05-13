@@ -32,24 +32,26 @@ const Header = ({ setStep, result, setResult }: any) => {
   }, [apiCalled]);
 
   const automateAPI = async () => {
-   if(apiCalled==true){
-    try {
-      let score = result?.filter((item: any) => item.isCorrect === true).length;
+    if (apiCalled == true) {
+      try {
+        let score = result?.filter(
+          (item: any) => item.isCorrect === true
+        ).length;
 
-      const payload = {
-        score: String(score),
-        result: result,
-      };
-      const response = await submitTest(payload);
-      if (response?.status === true) {
-        toast.success(response?.message);
-        localStorage.clear();
-        setStep(1);
-      } else {
-        toast.error("Submit Again!");
-      }
-    } catch (error) {}
-   }
+        const payload = {
+          score: String(score),
+          result: result,
+        };
+        const response = await submitTest(payload);
+        if (response?.status === true) {
+          toast.success(response?.message);
+          localStorage.clear();
+          setStep(1);
+        } else {
+          toast.error("Submit Again!");
+        }
+      } catch (error) {}
+    }
   };
 
   const formatTime = (time: any) => {
@@ -63,9 +65,13 @@ const Header = ({ setStep, result, setResult }: any) => {
   let student = localStorage.getItem("student_Name");
   student = student && JSON.parse(student);
   return (
-    <nav className="bg-[#01091F] flex items-center px-10 py-1 justify-between">
-      <div className="text-white text-[16px] font-semibold h-[50px]">
-        <img src={Logo} alt="logo" className="h-full rounded" />
+    <nav className="w-screen bg-[#01091F] flex items-center  justify-between px-4">
+      <div className="text-white text-[16px] font-semibold flex items-center h-[50px]">
+        <img
+          src={Logo}
+          alt="logo"
+          className="sm:h-full h-[70%] rounded-sm py-1"
+        />
       </div>
       <div className=" text-[#03C6B5] text-xl">{formatTime(seconds)}</div>
       <div className="text-white flex items-center gap-2">

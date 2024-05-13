@@ -17,18 +17,18 @@ const Question = ({
 }: any) => {
   console.log(correct, "correct");
   return (
-    <section className="bg-[#116BC5] w-[80vw] px-4 pt-8 pb-8 rounded-lg">
-      <h2 className=" text-lg font-medium">
+    <section className="bg-[#116BC5] sm:w-[80vw] w-[70vw] px-4 pt-8 pb-8 rounded-lg">
+      <h2 className=" sm:text-lg text-[15px] font-medium">
         {index + 1}. {question}
       </h2>
-      <div className="grid grid-cols-2 gap-4 py-8 px-10 ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 py-8 px-10 ">
         {answers?.map((content: string, i: any) => {
           return i + 1 !== currentAns ? (
             <span
               onClick={() =>
-                questionHandler(question, index + 1, i + 1, content,correct)
+                questionHandler(question, index + 1, i + 1, content, correct)
               }
-              className="border-[1px] border-rounded w-[350px]     rounded text-[18px] p-2 flex items-center gap-2 cursor-pointer hover:border-[#03D3BF] hover:text-[#03D3BF]"
+              className="border-[1px] border-rounded sm:w-[350px]     rounded text-[13px] sm:text-[18px] p-2 flex items-center gap-2 cursor-pointer hover:border-[#03D3BF] hover:text-[#03D3BF]"
             >
               <h1 className=" flex items-center justify-center px-2">
                 {i + 1}

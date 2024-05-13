@@ -234,10 +234,10 @@ const Exam = ({ setStep, result, setResult }: any) => {
   return (
     <main
       style={{ backgroundImage: `url(${BgImage})` }}
-      className="flex flex-col px-20 bg-[#151C32] h-screen text-white bg-cover bg-center"
+      className="sm:h-[92vh] h-[92vh] flex flex-col  bg-[#151C32]  text-white bg-cover bg-center"
     >
-      <section className="flex justify-between items-center p-10 px-40">
-        <h4>IP Academy</h4>
+      <section className="flex sm:justify-between items-center p-3 gap-4 sm:p-10 sm:px-40">
+        <h4 className="text-center">IP Academy</h4>
         <h4>Question: 15</h4>
         <h4>
           Answered: <b className="">{result.length}</b>
@@ -247,7 +247,7 @@ const Exam = ({ setStep, result, setResult }: any) => {
           Skipped: <b className="">{skip}</b>
         </h4>
       </section>
-      <section className="grid grid-cols-2">
+      <section className="flex items-center justify-center pt-10 sm:pt-0">
         {question?.map((item: any, index: any) => {
           return (
             index == currentQuestion && (

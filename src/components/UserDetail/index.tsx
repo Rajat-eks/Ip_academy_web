@@ -51,21 +51,21 @@ const UserDetail = ({ setStep }: any) => {
 
   return (
     <main
-      className="grid grid-cols-2 h-screen bg-cover bg-center"
+      className="grid sm:grid-cols-2 h-screen w-full bg-cover bg-center overflow-hidden py-1 "
       style={{ backgroundImage: `url(${BgImage})` }}
     >
-      <section className="flex flex-col justify-between pb-10 pl-4">
-        <div className="flex p-1">
+      <section className="  flex flex-col    sm:justify-between items-center sm:items-start">
+        <div className=" flex p-1">
           <img
             src={EffectualLogo}
             alt="logo"
             className="text-center h-14 rounded"
           />
         </div>
-        <img src={Student} alt="student" className=" w-[70%]" />
+        <img src={Student} alt="student" className="hidden sm:block w-[70%]" />
       </section>
-      <section className=" flex items-center justify-center  text-white  ">
-        <div className="w-[35vw]  rounded-2xl py-4 shadow-lg bg-[#146FCA]">
+      <section className=" flex items-center justify-center text-white  ">
+        <div className="sm:w-[35vw]   rounded-2xl sm:py-4 shadow-lg bg-[#146FCA]">
           <h1 className="text-center font-semibold text-2xl ">IP Academy</h1>
           <h2 className="text-center font-semibold text-2xl  pt-3">
             Student Registeration Form
@@ -154,7 +154,7 @@ const UserDetail = ({ setStep }: any) => {
                 </label>
               </div>
             </div>
-            <div className="px-10 ">
+            <div className="px-10">
               <button
                 type="submit"
                 className="  bg-[#CF9E1E] text-white rounded-2xl py-[8px] w-full px-10 flex items-center justify-center gap-6"
