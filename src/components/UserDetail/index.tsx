@@ -65,16 +65,16 @@ const UserDetail = ({ setStep }: any) => {
         <img src={Student} alt="student" className="hidden sm:block w-[70%]" />
       </section>
       <section className=" flex items-center justify-center text-white  ">
-        <div className="sm:w-[35vw]   rounded-2xl sm:py-4 shadow-lg bg-[#146FCA]">
+        <div className="  rounded-2xl py-3 shadow-lg bg-[#146FCA]">
           <h1 className="text-center font-semibold text-2xl ">IP Academy</h1>
-          <h2 className="text-center font-semibold text-2xl  pt-3">
+          <h2 className="text-center font-semibold text-2xl  pt-2">
             Student Registeration Form
           </h2>
           <p className="text-center font-light text-sm text-gray-200  pt-3">
             Fill your Details!
           </p>
           <form action="" onSubmit={submitHandler}>
-            <div className="grid grid-cols-1 py-6 px-10 gap-6">
+            <div className="grid grid-cols-1 py-6 px-12 gap-2">
               <div>
                 <label htmlFor="" className="p-1">
                   Name<span className="text-red-600 font-bold text-xl">*</span>
